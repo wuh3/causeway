@@ -288,6 +288,10 @@ footer > .navbar {
     width: 3%;
 }
 
+.collectionContentsAsAjaxTablePanel table.contents tbody .title-suppressed {
+    font-size: 1.25em;
+}
+
 .collectionContentsAsAjaxTablePanel table.contents a:hover {
     text-decoration:underline;
 }
@@ -482,12 +486,10 @@ div.entityHeaderPanel .entityActions .cssMenuPanel .cssMenuItems:first-child {
 }
 
 .entityHeaderPanel .entityTitle {
-    font-size: 1.52em;
     font-weight:normal;
     text-decoration:none;
     padding-right: 30px;
 }
-
 
 /* from BreadcrumbPanel.css */
 
@@ -1388,3 +1390,7 @@ div.dataTables_wrapper table.dataTable>thead>tr>th {
 
 /* --- */
 
+li.additionalLinkItem.list-inline-item.hidden {
+    padding-left: 0;
+    display: none;
+}

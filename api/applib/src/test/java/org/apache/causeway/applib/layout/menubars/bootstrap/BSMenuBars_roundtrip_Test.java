@@ -22,18 +22,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.apache.causeway.applib.layout.component.ServiceActionLayoutData;
 import org.apache.causeway.applib.services.jaxb.JaxbService;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import org.w3c.dom.Document;
-import java.io.ByteArrayInputStream;
-import org.xml.sax.InputSource;
+import org.apache.causeway.commons.internal.testing._DocumentTester;
 
 public class BSMenuBars_roundtrip_Test {
 
@@ -74,24 +67,15 @@ public class BSMenuBars_roundtrip_Test {
         menuBars.getPrimary().getMenus().add(menu);
 
         // when
-        String xml = jaxbService.toXml(menuBars);
+        String xml1 = jaxbService.toXml(menuBars);
 
         // when
         BSMenuBars menuBars2 =
-                jaxbService.fromXml(BSMenuBars.class, xml);
+                jaxbService.fromXml(BSMenuBars.class, xml1);
 
         // then
         String xml2 = jaxbService.toXml(menuBars2);
-
-        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-        dbf.setNamespaceAware(true);
-        DocumentBuilder db = dbf.newDocumentBuilder();
-        Document doc1 = db.parse(new InputSource(new ByteArrayInputStream(xml.getBytes("utf-8"))));
-        Document doc2 = db.parse(new InputSource(new ByteArrayInputStream(xml2.getBytes("utf-8"))));
-        doc1.normalizeDocument();
-        doc2.normalizeDocument();
-        assertThat(doc1.isEqualNode(doc2), is(true));
-
+        _DocumentTester.assertXmlEqualsIgnoreOrder(xml1, xml2);
     }
 
 }

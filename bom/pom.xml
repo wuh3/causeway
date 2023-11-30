@@ -34,7 +34,7 @@ It is therefore a copy of org.apache:apache, with customisations clearly identif
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.17</version>
+        <version>2.7.18</version>
         <relativePath/>
     </parent>
     <groupId>org.apache.causeway</groupId>
@@ -89,7 +89,7 @@ It is therefore a copy of org.apache:apache, with customisations clearly identif
         <archunit.version>1.2.0</archunit.version>
         <asciidoctorj.version>2.5.10</asciidoctorj.version>
         <asm.version>9.6</asm.version> <!-- keep in sync with org.eclipse.persistence:org.eclipse.persistence.asm -->
-        <approvaltests.version>22.2.1</approvaltests.version>
+        <approvaltests.version>22.3.2</approvaltests.version>
 
         <assertj-guava.version>3.24.2</assertj-guava.version>
 
@@ -97,9 +97,9 @@ It is therefore a copy of org.apache:apache, with customisations clearly identif
 
         <commons-email.version>1.5</commons-email.version>
         <commons-httpclient.version>4.5.12</commons-httpclient.version>
-        <commons-io.version>2.15.0</commons-io.version>
+        <commons-io.version>2.15.1</commons-io.version>
 
-        <cucumber.version>7.14.0</cucumber.version>
+        <cucumber.version>7.14.1</cucumber.version>
 
         <cxf-rt-rs-client.version>3.6.2</cxf-rt-rs-client.version>
 
@@ -145,7 +145,7 @@ It is therefore a copy of org.apache:apache, with customisations clearly identif
         <jquery-ui.version>1.13.2</jquery-ui.version> <!-- org.webjars:jquery-ui -->
 
         <jsr305.version>3.0.2</jsr305.version>
-        <jsoup.version>1.16.2</jsoup.version>
+        <jsoup.version>1.17.1</jsoup.version>
         <junit-jupiter.version>5.10.1</junit-jupiter.version> <!-- overrides spring -->
         <junit-platform.version>1.10.1</junit-platform.version>
 
@@ -162,7 +162,7 @@ It is therefore a copy of org.apache:apache, with customisations clearly identif
         <ognl.version>3.4.2</ognl.version>
 
         <picocontainer.version>2.15</picocontainer.version>
-        <poi.version>5.2.4</poi.version>
+        <poi.version>5.2.5</poi.version>
 
         <quartz-scheduler.version>2.3.2</quartz-scheduler.version>
 
@@ -173,13 +173,13 @@ It is therefore a copy of org.apache:apache, with customisations clearly identif
         <shiro.version>1.13.0</shiro.version>
         <simpleslackapi.version>1.4.0</simpleslackapi.version>
         <slf4j-api.version>2.0.9</slf4j-api.version> <!-- also provided by spring-boot-starter-logging, needed to solve convergence issues -->
-        <spring-boot.version>2.7.17</spring-boot.version>
+        <spring-boot.version>2.7.18</spring-boot.version>
         <summernote.version>0.8.20</summernote.version>
         <surefire-plugin.argLine>-Xmx384m</surefire-plugin.argLine>
         <surefire.useModulePath>false</surefire.useModulePath> <!-- disable module-path for testing, that is, put everything on the class-path -->
         <swagger-core.version>2.2.10</swagger-core.version>
 
-        <wicket.version>9.15.0</wicket.version>
+        <wicket.version>9.16.0</wicket.version>
         <wicket-bootstrap.version>6.0.5</wicket-bootstrap.version> <!-- de.agilecoders.wicket:wicket-bootstrap... -->
         <wicket-webjars.version>3.0.7</wicket-webjars.version>
         <wicket-viewer-jquery.version>3.7.1</wicket-viewer-jquery.version> <!--  as served by wicket via webjars -->
@@ -2256,7 +2256,7 @@ It is therefore a copy of org.apache:apache, with customisations clearly identif
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>3.4.5</version>    <!--bumped-->
+                    <version>3.5.0</version>    <!--bumped-->
                     <configuration>
                         <pluginManagementExcludes>
                             <exclude>org.eclipse.m2e:lifecycle-mapping</exclude>
